@@ -1,0 +1,21 @@
+pipeline:
+  obs_code: "Z99"
+  band: "R"
+
+astrometry_net:
+  api_key: ""
+  use_local: false
+  local_bin: "/usr/bin/solve-field"
+
+findorb:
+  executable: "find_orb"
+  work_dir: "data/findorb_work"
+
+detection:
+  sigma_threshold: 3.0
+  min_blob_area: 3
+  model_path: "models/detector.pt"
+
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
